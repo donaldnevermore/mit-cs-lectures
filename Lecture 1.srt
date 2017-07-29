@@ -1,7 +1,7 @@
 1
 00:00:00,790 --> 00:00:03,190
-The following content is
-provided under a Creative
+接下来的内容是在【创作共用许可证】的条件下提供的
+The following content is provided under a Creative
 
 2
 00:00:03,190 --> 00:00:04,730
@@ -9,113 +9,123 @@ Commons license.
 
 3
 00:00:04,730 --> 00:00:07,030
-Your support will help
-MIT OpenCourseWare
+您的支持会使麻省理工学院公开课
+Your support will help MIT OpenCourseWare
 
 4
 00:00:07,030 --> 00:00:11,390
-continue to offer high-quality,
-educational resources for free.
+继续免费提供高质量的教育资源
+continue to offer high-quality,educational resources for free.
 
 5
 00:00:11,390 --> 00:00:13,990
-To make a donation, or
-view additional materials
+如果想要捐赠的，或者查看额外的
+To make a donation, or view additional materials
 
 6
 00:00:13,990 --> 00:00:17,880
-from hundreds of MIT courses,
-visit MIT OpenCourseWare
+MIT课程的资源，请访问MIT公开课的官网
+from hundreds of MIT courses,visit MIT OpenCourseWare
 
 7
 00:00:17,880 --> 00:00:18,850
+ocw.mit.edu
 at ocw.mit.edu.
 
 8
 00:00:29,957 --> 00:00:30,790
+好
 ANA BELL: All right.
 
 9
 00:00:30,790 --> 00:00:33,100
+开始吧
 Let's begin.
 
 10
 00:00:33,100 --> 00:00:35,830
-As I mentioned
-before, this lecture
+我之前说过，这门课
+As I mentioned before, this lecture
 
 11
 00:00:35,830 --> 00:00:37,690
+会被录下来做公开课
 will be recorded for OCW.
 
 12
 00:00:37,690 --> 00:00:39,309
-Again, in future
-lectures, if you
+在以后的课程中，如果你
+Again, in future lectures, if you
 
 13
 00:00:39,309 --> 00:00:41,350
-don't want to have the
-back of your head show up,
+不想在公开课中露面的话
+don't want to have the back of your head show up,
 
 14
 00:00:41,350 --> 00:00:44,880
-just don't sit in
-this front area here.
+不要坐在前排区域
+just don't sit in this front area here.
 
 15
 00:00:44,880 --> 00:00:46,630
-First of all, wow,
-what a crowd, you guys.
+首先，来了这么多人，你们
+First of all, wow,what a crowd, you guys.
 
 16
 00:00:46,630 --> 00:00:48,490
+我们终于在26-100教室里见面了
 We're finally in 26-100.
 
 17
 00:00:48,490 --> 00:00:52,240
+课程6.0001真的很成功
 6.0001 made it big, huh?
 
 18
 00:00:52,240 --> 00:00:55,960
-Good afternoon and welcome to
-the very first class of 6.0001,
+下午好，欢迎来到课程6.0001的第一节课
+Good afternoon and welcome to the very first class of 6.0001,
 
 19
 00:00:55,960 --> 00:00:58,960
+这学期也叫课程600
 and also 600, this semester.
 
 20
 00:00:58,960 --> 00:01:00,610
+我是Ana Bell
 My name is Ana Bell.
 
 21
 00:01:00,610 --> 00:01:01,840
+名Ana
 First name, Ana.
 
 22
 00:01:01,840 --> 00:01:03,250
+姓Bell
 Last name, Bell.
 
 23
 00:01:03,250 --> 00:01:06,460
-I'm a lecturer in
-the EECS Department.
+我是电子工程和计算机科学系的讲师
+I'm a lecturer in the EECS Department.
 
 24
 00:01:06,460 --> 00:01:08,680
-And I'll be giving some
-of the lectures for today,
+今天由我来讲课
+And I'll be giving some of the lectures for today,
 
 25
 00:01:08,680 --> 00:01:13,030
-along with later on in the term,
-Professor Eric Grimson, who's
+之后会由Eric Grimson教授来讲
+along with later on in the term,Professor Eric Grimson, who's
 
 26
 00:01:13,030 --> 00:01:15,820
-sitting right down there, will
-be giving some of the lectures,
+他就坐在那里，之后也会来讲课
+sitting right down there, will be giving some of the lectures,
 
 27
 00:01:15,820 --> 00:01:17,620
@@ -123,41 +133,43 @@ as well.
 
 28
 00:01:17,620 --> 00:01:21,550
-Today we're going to go over
-some basic administrivia,
+今天我们会过一遍一些基本教学要求
+Today we're going to go over some basic administrivia,
 
 29
 00:01:21,550 --> 00:01:23,101
-a little bit of
-course information.
+一点关于这门课程的信息
+a little bit of course information.
 
 30
 00:01:23,101 --> 00:01:24,850
-And then, we're going
-to talk a little bit
+然后会讲到一个主题
+And then, we're going to talk a little bit
 
 31
 00:01:24,850 --> 00:01:26,164
+什么是计算
 about what is computation?
 
 32
 00:01:26,164 --> 00:01:27,580
-We'll discuss at
-a very high level
+我们会在较高的层面上去讨论
+We'll discuss at a very high level
 
 33
 00:01:27,580 --> 00:01:29,860
-what computers do just
-to make sure we're all
+计算机能做什么，以确保我们的学习进度
+what computers do just to make sure we're all
 
 34
 00:01:29,860 --> 00:01:31,610
+保持一致
 on the same page.
 
 35
 00:01:31,610 --> 00:01:34,180
-And then, we're going to dive
-right into Python basics.
+然后我们会深入探讨Python的机制
+And then, we're going to dive right into Python basics.
 
 36
 00:01:34,180 --> 00:01:36,763
