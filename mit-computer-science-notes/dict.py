@@ -2,7 +2,7 @@
 
 import math
 
-
+# 字典的基本操作
 Dict1 = {1: 'one', 2: 'two', 3: 'three'}
 L1 = [[1, 'one'], [2, 'two']]
 del Dict1[1]
@@ -18,7 +18,7 @@ def keySearch(L, k):
 
 # print(keySearch(L1, 1))
 
-
+# 确保输入为浮点数
 def getFloat(requestMsg, errorMsg):
     inputOK = False
     while not inputOK:

@@ -1,3 +1,5 @@
+#coding:utf-8
+# 选择排序
 def selSort(L):
     print('original:', L)
     for i in range(len(L) - 1):
@@ -17,7 +19,7 @@ test1 = [1, 5, 4, 3, 2, 6]
 
 # selSort(test1)
 
-
+# 冒泡排序
 def bubbleSort(L):
     swap = True
     while swap:

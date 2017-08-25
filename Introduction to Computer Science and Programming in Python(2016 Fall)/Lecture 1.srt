@@ -198,86 +198,93 @@ As I mentioned in my introductory email, all
 
 41
 00:01:43,907 --> 00:01:46,240
-the slides and code that I'll
-talk about during lectures
+课程用到的所有的幻灯片和源代码
+the slides and code that I'll talk about during lectures
 
 42
 00:01:46,240 --> 00:01:48,250
-will be up before
-lecture, so I highly
+都会在课前放上去，所以我非常
+will be up before lecture, so I highly
 
 43
 00:01:48,250 --> 00:01:52,540
-encourage you to download
-them and to have them open.
+鼓励你们去下载下来，打开来看
+encourage you to download them and to have them open.
 
 44
 00:01:52,540 --> 00:01:56,020
-We're going to go through some
-in-class exercises which will
+我们还会做些课上练习
+We're going to go through some in-class exercises which will
 
 45
 00:01:56,020 --> 00:01:57,820
+也是在幻灯片上
 be available on those slides.
 
 46
 00:01:57,820 --> 00:01:59,830
+很有趣
 And it's fun to do.
 
 47
 00:01:59,830 --> 00:02:07,420
-And it's also great if could
-take notes about the code just
+在代码上做笔记非常有用
+And it's also great if could take notes about the code just
 
 48
 00:02:07,420 --> 00:02:09,210
+以后也能看
 for future reference.
 
 49
 00:02:09,210 --> 00:02:10,210
+真的
 It's true.
 
 50
 00:02:10,210 --> 00:02:12,220
-This is a really
-fast-paced course,
+这门课节奏非常地快
+This is a really fast-paced course,
 
 51
 00:02:12,220 --> 00:02:14,110
+我们要赶紧了
 and we ramp up really quickly.
 
 52
 00:02:14,110 --> 00:02:17,842
-We do want to position you
-to succeed in this course.
+我们真的想促进你在这门课上获得成功
+We do want to position you to succeed in this course.
 
 53
 00:02:17,842 --> 00:02:19,300
-As I was writing
-this, I was trying
+我再写这些的时候，我想到
+As I was writing this, I was trying
 
 54
 00:02:19,300 --> 00:02:21,160
-to think about when
-I was first starting
+我第一次开始编程的时候
+to think about when I was first starting
 
 55
 00:02:21,160 --> 00:02:24,580
-to program what helped
-me get through my very
+帮助我上好我的第一次编程课
+to program what helped me get through my very
 
 56
 00:02:24,580 --> 00:02:26,110
+的东西
 first programming course.
 
 57
 00:02:26,110 --> 00:02:29,470
+这真的是很好的
 And this is really a good list.
 
 58
 00:02:29,470 --> 00:02:31,840
-The first thing was I just
-read the psets as soon
+
+The first thing was I just read the psets as soon
 
 59
 00:02:31,840 --> 00:02:37,600
