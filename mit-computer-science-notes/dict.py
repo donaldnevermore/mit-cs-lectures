@@ -1,4 +1,4 @@
-# example of structured code
+# 结构化代码的示例
 
 import math
 
@@ -36,7 +36,6 @@ base = getFloat('Enter a float', 'Error: Base must be a floating point number')
 height = getFloat(
     'Enter a float', 'Error: Height must be a floating point number')
 
-# calculate and print out the hyp
+#  毕达哥斯拉定理的第三条边的计算
 hyp = math.sqrt(base * base + height * height)
-print('base:' + str(base) + ' height:' +
-      str(height) + ' hyp:' + str(hyp))
+print('base:' + str(base) + ' height:' + str(height) + ' hyp:' + str(hyp))

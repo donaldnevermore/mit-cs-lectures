@@ -1,3 +1,4 @@
+# 用三种方法计算乘方
 def exp1(a, b):
     answer = 1
     if a == 0:
