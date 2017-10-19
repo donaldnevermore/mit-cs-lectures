@@ -1,3 +1,4 @@
+# 面向对象
 class Person(object):
     def __init__(self, family_name, first_name):
         self.family_name = family_name
@@ -43,15 +44,4 @@ class MITPerson(Person):
 # print(m3.getIdNum())
 # print(m1.sing(m2,'what do you want?'))
 
-# OK
-def duplicate_encode(word):
-    newWord = ""
-    for v in word:
-        if word.count(v) > 1:
-            newWord += ')'
-        else:
-            newWord += '('
-    return newWord
 
-
-print(duplicate_encode('justdoit'))

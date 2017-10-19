@@ -1,3 +1,4 @@
+# 二分查找法求平方根
 def squareRootBi(x, epsilon):
     '''x>=0,epsilon>=0'''
     assert x >= 0, "x must be greater than zero" + str(x)

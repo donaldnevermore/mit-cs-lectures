@@ -1,3 +1,4 @@
+# 优化过的平方根算法
 def squareRootNR(x, epsilon):
     assert x >= 0, 'x must be greater than 0' + str(x)
     assert epsilon > 0, 'x must be greater than 0' + str(x)

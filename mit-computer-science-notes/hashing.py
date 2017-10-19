@@ -1,3 +1,4 @@
+# 哈希映射
 def charSetCreate():
     charSet = []
     for i in range(0, 255):

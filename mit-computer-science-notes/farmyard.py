@@ -57,7 +57,7 @@ def solve2(numLegs, numHeads):
     if not solutionFound:
         print("there is no solution")
 
-
+# 检测回文
 def isPalindrome(string):
     if len(string) <= 1:
         return True

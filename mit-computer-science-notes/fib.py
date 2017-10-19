@@ -1,3 +1,4 @@
+# 斐波那契数列
 def fib(n):
     global numCalls
     numCalls += 1
@@ -20,5 +21,6 @@ def fastFib(n):
 numCalls = 0
 n = 30
 memo = {0: 1, 1: 1}
-# print('fib of', n, '=', fib(n), 'numCalls=', numCalls)
-# print(fastFib(30),"numCalls=",numCalls)
+
+print('fib of', n, '=', fib(n), 'numCalls=', numCalls)
+print(fastFib(30), "numCalls=", numCalls)
