@@ -1,9 +1,12 @@
-from sorted import selSort
-
-
 # left是原列表的左半部分
 # 合并两个列表
+
+
 def merge(left, right):
+    '''
+    归并排序
+    复杂度 O(n*log(n))
+    '''
     result = []
     i, j = 0, 0
     while i < len(left) and j < len(right):
@@ -31,7 +34,7 @@ def mergeSort(L):
             L[0], L[1] = L[1], L[0]
         return L[:]
     else:
-        middle = int(len(L) / 2) # 分解列表，只能为整数
+        middle = int(len(L) / 2)  # 分解列表，只能为整数
         left = mergeSort(L[:middle])
         right = mergeSort(L[middle:])
         together = merge(left, right)
@@ -43,4 +46,3 @@ left = [3, 12, 17, 24]
 right = [1, 2, 4, 15]
 test = [1, 5, 8, 3, 56, 24, 35, 99, 88, 22]
 mergeSort(test)
-# selSort(test)

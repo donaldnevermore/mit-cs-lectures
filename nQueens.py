@@ -9,7 +9,7 @@ def conflict(state,nextX):
     return  False
 
 def queens(num=8,state=()):
-    '''只剩一个皇后没放，穷举她的位置'''
+    '''只剩一个皇后没放，穷举她的位置，递归太多影响性能'''
     for pos in range(num):
         if not conflict(state,pos):
             if len(state)==num-1:               
