@@ -9,5 +9,5 @@ This project is to help Chinese students to attain high quality MIT education re
 
 ## scientific computation library
 ```
-pip install numpy matplotlib scikit-learn
+pip install numpy matplotlib scikit-learn scipy
 ```
