@@ -5,3 +5,9 @@ This project is to help Chinese students to attain high quality MIT education re
 
 - Introduction to Computer Science and Programming in Python(2016 Fall)是最新版公开课的字幕翻译
 - mit-computer-science-notes文件夹是我做的练习和笔记
+- machine-learning folder is my notes while learning scikit-learn
+
+## scientific computation library
+```
+pip install numpy matplotlib scikit-learn
+```
