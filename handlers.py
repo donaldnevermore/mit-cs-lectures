@@ -1,17 +1,3 @@
-class HTMLRenderer:
-    def start_paragraph(self):
-        print('<p>')
-
-    def end_paragraph(self):
-        print('</p>')
-
-    def sub_emphasis(self,match):
-        return '<em>{}</em>'.format(match.group(1))
-
-    def feed(self,data):
-        print(data)
-
-    
 class Handler:
     def callback(self,prefix,name,*args):
         method = getattr(self, prefix+name, None)
@@ -31,3 +17,17 @@ class Handler:
                 result = match.group(0)
             return result
         return substitution
+
+
+class HTMLRenderer(Handler):
+    def start_paragraph(self):
+        print('<p>')
+
+    def end_paragraph(self):
+        print('</p>')
+
+    def sub_emphasis(self,match):
+        return '<em>{}</em>'.format(match.group(1))
+
+    def feed(self,data):
+        print(data)
