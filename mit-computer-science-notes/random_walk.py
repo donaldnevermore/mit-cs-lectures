@@ -30,7 +30,7 @@ class CompassPt(object):
             self.pt = pt
         else:
             raise ValueError('inCompassPt.__init__')
-    def move(self,dist):
+    def move(self, dist):
         if self.pt=='N':
             return (0,dist)
         elif self.pt=='S':
