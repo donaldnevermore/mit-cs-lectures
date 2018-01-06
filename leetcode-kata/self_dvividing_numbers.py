@@ -1,4 +1,4 @@
-class selfDividingNumbers:
+class Solution:
     def selfDividingNumbers(self, left, right):
         def self_dividing(num):
             """
