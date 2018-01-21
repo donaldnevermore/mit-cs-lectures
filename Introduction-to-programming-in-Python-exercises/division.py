@@ -4,6 +4,6 @@ class Division:
         self.b=b
 
     def div(self):
-            return True if self.a%self.b==0 else False
+        return True if self.a % self.b==0 else False
 
     
