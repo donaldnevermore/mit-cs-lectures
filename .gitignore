@@ -1,2 +1,5 @@
-.vscode
+# compiled files #
 *.pyc
+
+# editor #
+.vscode
