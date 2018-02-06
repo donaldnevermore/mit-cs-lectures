@@ -11,5 +11,5 @@ getting-started-period by observing how others people do it.
 ## scientific computation library
 
 ```
-pipe install numpy matplotlib scikit-learn scip
+pip install numpy matplotlib scikit-learn scip
 ```
