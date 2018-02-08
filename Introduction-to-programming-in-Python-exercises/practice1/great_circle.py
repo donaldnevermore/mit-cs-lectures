@@ -12,6 +12,7 @@ dy1 = radians(y1)
 dx2 = radians(x2)
 dy2 = radians(y2)
 
-distance = 60*acos(sin(dx1)*sin(dx2)+cos(dx1)*cos(dx2)*cos(dy1-dy2))
+# the formula use degrees
+distance = 60*degrees(acos(sin(dx1)*sin(dx2)+cos(dx1)*cos(dx2)*cos(dy1-dy2)))
 
 print(f'{distance} nautical miles')
