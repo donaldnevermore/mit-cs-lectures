@@ -9,11 +9,11 @@ import random
 import math
 import sys
 
-a=int(sys.argv[1])
-b=int(sys.argv[2])
+a = int(sys.argv[1])
+b = int(sys.argv[2])
 
-diff= (b+1) - a
+diff = (b + 1) - a
 
 for i in range(20):
-    rd = math.floor(random.random() * diff + a)  
+    rd = math.floor(random.random() * diff + a)
     print(rd)

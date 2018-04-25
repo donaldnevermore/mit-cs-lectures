@@ -14,5 +14,4 @@ elif c > minimum and c < maximum:
 else:
     arr = (minimum, maximum, c)
 
-
 print(arr)
