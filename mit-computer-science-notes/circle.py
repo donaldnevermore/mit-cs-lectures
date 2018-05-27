@@ -26,12 +26,12 @@ class Circle():
         return (newX, newY)
 
 
-class Field():
+class Field:
     def __init__(self, long):
         pass
 
 
-class Point():
+class Point:
     def __init__(self, x, y):
         self.loction = (x, y)
 
