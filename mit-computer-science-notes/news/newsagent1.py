@@ -1,18 +1,18 @@
 from nntplib import NNTP
 import time
-from datetime import date,datetime
+from datetime import date, datetime
 
 # # yesterday=localtime(time() - day)
-date = datetime(2000,1,1)
+new_date = datetime(2000, 1, 1)
 # # date=strftime('%y%m%d',yesterday)
 # # hour=strftime('%H%M%S',yesterday)
 
-servername='news.newsfan.net'
-group='comp.lang.python'
-server=NNTP(servername)
+servername = 'news.newsfan.net'
+group = 'comp.lang.python'
+server = NNTP(servername)
 # (resp, count, first, last, name)=server.group('comp.lang.python')
 # (resp, subs) = s.xhdr('subject', (str(first)+'-'+str(last)))
-ids=server.newnews(group,date)[1]
+ids = server.newnews(group, new_date)[1]
 
 # for i in ids:
 #     head=server.head(i)[3]
