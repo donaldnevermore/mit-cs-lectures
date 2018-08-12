@@ -1,5 +1,5 @@
 import sys
-from stdlib_python import stdio
+import stdio
 
 n = 3757208
 

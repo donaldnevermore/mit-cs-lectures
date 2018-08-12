@@ -1,5 +1,5 @@
 import sys
-from stdlib_python import stdio
+import stdio
 
 E = 1e-15
 

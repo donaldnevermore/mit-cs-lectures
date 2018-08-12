@@ -1,4 +1,4 @@
-from stdlib_python import stdio
+import stdio
 import sys
 
 n = int(sys.argv[1])

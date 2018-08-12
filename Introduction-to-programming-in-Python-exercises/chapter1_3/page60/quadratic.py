@@ -1,6 +1,6 @@
 import math
 import sys
-from stdlib_python import stdio
+import stdio
 
 a = float(sys.argv[1])
 b = float(sys.argv[2])

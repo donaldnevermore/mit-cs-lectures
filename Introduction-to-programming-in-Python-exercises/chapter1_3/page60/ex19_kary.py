@@ -1,5 +1,5 @@
 import sys
-from stdlib_python import stdio
+import stdio
 
 
 def hex_num(num: int) -> str:
