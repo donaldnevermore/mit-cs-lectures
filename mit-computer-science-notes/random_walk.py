@@ -2,10 +2,11 @@ import math
 import random
 import pylab
 
+
 # 随机移动问题
 
 
-class Location(object):
+class Location:
     def __init__(self, x, y):
         self.x = float(x)
         self.y = float(y)
@@ -20,10 +21,10 @@ class Location(object):
         ox, oy = other.getCoords()
         xDist = self.x - ox
         yDist = self.y - oy
-        return math.sqrt(xDist**2 + yDist**2)
+        return math.sqrt(xDist ** 2 + yDist ** 2)
 
 
-class CompassPt(object):
+class CompassPt:
     possibles = ('N', 'S', 'E', 'W')
 
     def __init__(self, pt):
@@ -45,7 +46,7 @@ class CompassPt(object):
             raise ValueError('in  CompassPt.move')
 
 
-class Field(object):
+class Field:
     def __init__(self, drunk, loc):
         self.drunk = drunk
         self.loc = loc
@@ -62,7 +63,7 @@ class Field(object):
         return self.drunk
 
 
-class Drunk(object):
+class Drunk:
     def __init__(self, name):
         self.name = name
 

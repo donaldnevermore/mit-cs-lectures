@@ -3,12 +3,12 @@ def dragonCurve(level):
         return 'F'
     else:
         prevPattern = dragonCurve(level - 1)
-        nextPattern=''
+        nextPattern = ''
         for i in reversed(prevPattern):
             if i == 'L':
-                nextPattern+='R'
+                nextPattern += 'R'
             elif i == 'R':
-                nextPattern+='L'
+                nextPattern += 'L'
             else:
-                nextPattern+=i
-        return prevPattern+'L'+nextPattern
+                nextPattern += i
+        return prevPattern + 'L' + nextPattern

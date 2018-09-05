@@ -22,7 +22,7 @@ def bisearch(s, e, first, last):
     print(first, last, count)
     mid = int(first + (last - first) / 2)
     if last - first <= 2:
-        return s[first] == e or s[last] == e # 简洁的表达
+        return s[first] == e or s[last] == e  # 简洁的表达
     if s[mid] == e:
         return True
     if s[mid] > e:

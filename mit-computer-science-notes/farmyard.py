@@ -57,6 +57,7 @@ def solve2(numLegs, numHeads):
     if not solutionFound:
         print("there is no solution")
 
+
 # 检测回文
 def isPalindrome(string):
     if len(string) <= 1:
@@ -71,8 +72,7 @@ def isPalindrome1(string, indent):
         print(indent)
         return True
     else:
-        ans = string[
-            0] == string[-1] and isPalindrome1(string[1:-1], indent + indent)
+        ans = string[0] == string[-1] and isPalindrome1(string[1:-1], indent + indent)
         print(indent, ans)
         return ans
 
