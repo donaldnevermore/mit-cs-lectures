@@ -33,7 +33,7 @@ class IndicatorState(Enum):
     OFF = 2
 
 
-class ReliefValueState(Enum):
+class ReliefValveState(Enum):
     OPEN = 1
     CLOSED = 2
 
@@ -52,17 +52,17 @@ class CoffeeMakerAPI(ABC):
         pass
 
     @abstractmethod
-    def set_boiler_state(self, s: BoilerState) -> None:
+    def set_boiler_state(self, s: BoilerState):
         pass
 
     @abstractmethod
-    def set_warmer_state(self, s: WarmerState) -> None:
+    def set_warmer_state(self, s: WarmerState):
         pass
 
     @abstractmethod
-    def set_indicator_state(self, s: IndicatorState) -> None:
+    def set_indicator_state(self, s: IndicatorState):
         pass
 
     @abstractmethod
-    def set_relief_value_state(self, s: ReliefValueState) -> None:
+    def set_relief_valve_state(self, s: ReliefValveState):
         pass

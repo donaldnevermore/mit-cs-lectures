@@ -56,33 +56,3 @@ def solve2(numLegs, numHeads):
                 solutionFound = True
     if not solutionFound:
         print("there is no solution")
-
-
-# 检测回文
-def isPalindrome(string):
-    if len(string) <= 1:
-        return True
-    else:
-        return string[0] == string[-1] and isPalindrome(string[1:-1])
-
-
-def isPalindrome1(string, indent):
-    print(indent, string)
-    if len(string) <= 1:
-        print(indent)
-        return True
-    else:
-        ans = string[0] == string[-1] and isPalindrome1(string[1:-1], indent + indent)
-        print(indent, ans)
-        return ans
-
-
-def fib(x):
-    if x == 0 or x == 1:
-        return 1
-    else:
-        return fib(x - 1) + fib(x - 2)
-
-
-# run test
-print(fib(5))

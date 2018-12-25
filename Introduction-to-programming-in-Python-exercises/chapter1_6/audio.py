@@ -1,5 +1,7 @@
-import stdaudio, stdarray
 import math
+
+import stdarray
+import stdaudio
 
 SPS = 44100
 hz = 440.0
