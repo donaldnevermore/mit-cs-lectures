@@ -1,12 +1,11 @@
-# OK
 def duplicate_encode(word):
-    newWord = ""
+    new_word = ""
     for v in word:
         if word.count(v) > 1:
-            newWord += ')'
+            new_word += ')'
         else:
-            newWord += '('
-    return newWord
+            new_word += '('
+    return new_word
 
 
 print(duplicate_encode('justdoit'))

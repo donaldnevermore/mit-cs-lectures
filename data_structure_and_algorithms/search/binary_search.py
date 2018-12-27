@@ -1,14 +1,15 @@
-# 牛顿二分查找法
-def bisearch(s, e, first, last):
-    global count
-    count += 1
-    print(first, last, count)
-    mid = int(first + (last - first) / 2)
-    if last - first <= 2:
-        return s[first] == e or s[last] == e  # 简洁的表达
-    if s[mid] == e:
+def binary_search(arr, elem, first, last):
+    """牛顿二分查找法"""
+    mid = first + (last - first) // 2
+    if last - first <= 1:
+        return arr[first] == elem or arr[last] == elem  # 简洁的表达
+    if arr[mid] == elem:
         return True
-    if s[mid] > e:
-        return bisearch(s, e, first, mid - 1)
+    if arr[mid] > elem:
+        return binary_search(arr, elem, first, mid - 1)
     else:
-        return bisearch(s, e, mid + 1, last)
+        return binary_search(arr, elem, mid + 1, last)
+
+
+a = [0, 1, 2]
+print(binary_search(a, 1, 0, 2))

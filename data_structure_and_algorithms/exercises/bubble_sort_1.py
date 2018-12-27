@@ -1,4 +1,4 @@
-def bubble_sort(arr: list):
+def bubble_sort(arr):
     swap = True
 
     while swap:

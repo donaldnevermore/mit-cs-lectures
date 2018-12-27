@@ -1,7 +1,7 @@
 # 斐波那契数列
 def fib(n):
     global num_calls
-    numCalls += 1
+    num_calls += 1
     if n <= 1:
         return 1
     else:
@@ -11,7 +11,7 @@ def fib(n):
 def fastFib(n: int):
     global num_calls
     global memo
-    numCalls += 1
+    num_calls += 1
     print("fib1 called with", n)
     if n not in memo:
         memo[n] = fastFib(n - 1) + fastFib(n - 2)

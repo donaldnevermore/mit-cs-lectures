@@ -1,5 +1,5 @@
 # 优化过的平方根算法
-def squareRootNR(x, epsilon):
+def square_root_nr(x, epsilon):
     assert x >= 0, 'x must be greater than 0' + str(x)
     assert epsilon > 0, 'x must be greater than 0' + str(x)
     guess = x / 2
@@ -13,5 +13,5 @@ def squareRootNR(x, epsilon):
     return guess
 
 
-squareRootNR(123456789, 0.0001)
-squareRootNR(123456789, 0.1)
+square_root_nr(123456789, 0.0001)
+square_root_nr(123456789, 0.1)

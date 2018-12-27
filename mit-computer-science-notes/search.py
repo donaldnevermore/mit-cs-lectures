@@ -1,15 +1,15 @@
 def search(s, e):
     answer = None
     i = 0
-    numCompares = 0
+    num_compares = 0
     while i < len(s) and answer is None:
-        numCompares += 1
+        num_compares += 1
         if e == s[i]:
             answer = True
         elif e < s[i]:
             answer = False
         i += 1
-    print(answer, numCompares)
+    print(answer, num_compares)
 
 
 count = 0
@@ -21,7 +21,7 @@ def bisearch(s, e, first, last):
     count += 1
     print(first, last, count)
     mid = int(first + (last - first) / 2)
-    if last - first <= 2:
+    if last - first <= 1:
         return s[first] == e or s[last] == e  # 简洁的表达
     if s[mid] == e:
         return True

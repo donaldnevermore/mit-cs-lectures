@@ -19,6 +19,7 @@ class Queue:
         self.length += 1
 
     def dequeue(self):
+        # 队列为空会报错
         item = self.first.item
         self.first = self.first.next
 
