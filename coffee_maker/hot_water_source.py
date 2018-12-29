@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
+from typing import Any
 
 
 class HotWaterSource(ABC):
-    ui: any
-    cv: any
+    ui: Any
+    cv: Any
     is_brewing: bool = False
 
     def init(self, ui, cv):

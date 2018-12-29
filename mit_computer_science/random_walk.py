@@ -1,9 +1,8 @@
+"""随机移动问题"""
+
 import math
 import random
 import pylab
-
-
-# 随机移动问题
 
 
 class Location:
@@ -14,14 +13,14 @@ class Location:
     def move(self, xc, yc):
         return Location(self.x + float(xc), self.y + float(yc))
 
-    def getCoords(self):
+    def get_coords(self):
         return self.x, self.y
 
-    def getDist(self, other):
-        ox, oy = other.getCoords()
-        xDist = self.x - ox
-        yDist = self.y - oy
-        return math.sqrt(xDist ** 2 + yDist ** 2)
+    def get_dist(self, other):
+        ox, oy = other.get_coords()
+        x_dist = self.x - ox
+        y_dist = self.y - oy
+        return math.sqrt(x_dist ** 2 + y_dist ** 2)
 
 
 class CompassPt:
@@ -35,13 +34,13 @@ class CompassPt:
 
     def move(self, dist):
         if self.pt == 'N':
-            return (0, dist)
+            return 0, dist
         elif self.pt == 'S':
-            return (0, -dist)
+            return 0, -dist
         elif self.pt == 'E':
-            return (dist, 0)
+            return dist, 0
         elif self.pt == 'W':
-            return (-dist, 0)
+            return -dist, 0
         else:
             raise ValueError('in  CompassPt.move')
 
@@ -52,14 +51,14 @@ class Field:
         self.loc = loc
 
     def move(self, cp, dist):
-        oldLoc = self.loc
+        old_loc = self.loc
         xc, yc = cp.move(dist)
-        self.loc = oldLoc.move(xc, yc)
+        self.loc = old_loc.move(xc, yc)
 
-    def getLoc(self):
+    def get_loc(self):
         return self.loc
 
-    def getDrunk(self):
+    def get_drunk(self):
         return self.drunk
 
 
@@ -68,20 +67,20 @@ class Drunk:
         self.name = name
 
     def move(self, field, time=1):
-        if field.getDrunk() != self:
+        if field.get_drunk() != self:
             raise ValueError('Drunk.move called with drunk not in field')
         for i in range(time):
             pt = CompassPt(random.choice(CompassPt.possibles))
             field.move(pt, 1)  # Drunk每次走一步
 
 
-def performTrial(time, f):
-    start = f.getLoc()
+def perform_trial(time, f):
+    start = f.get_loc()
     distances = [0.0]
     for t in range(1, time + 1):
-        f.getDrunk().move(f)
-        newLoc = f.getLoc()
-        distance = newLoc.getDist(start)
+        f.get_drunk().move(f)
+        new_loc = f.get_loc()
+        distance = new_loc.get_dist(start)
         distances.append(distance)
     return distances
 
@@ -89,38 +88,38 @@ def performTrial(time, f):
 drunk = Drunk('Homer Simpson')
 for i in range(3):
     f = Field(drunk, Location(0, 0))
-    distances = performTrial(500, f)
+    distances = perform_trial(500, f)
     pylab.plot(distances)
 pylab.title('Homer\'s Random Walk')
 pylab.xlabel('Time')
 pylab.ylabel('Distance from Origin')
 
 
-def performSim(time, numTrials):
-    distLists = []
-    for trial in range(numTrials):
+def perform_sim(time, num_trials):
+    dist_lists = []
+    for trial in range(num_trials):
         d = Drunk('Drunk' + str(trial))
         f = Field(d, Location(0, 0))
-        distances = performTrial(time, f)
-        distLists.append(distances)
-    return distLists
+        distances = perform_trial(time, f)
+        dist_lists.append(distances)
+    return dist_lists
 
 
-def ansQuest(maxTime, numTrials):
+def ans_quest(max_time, num_trials):
     means = []
-    distLists = performSim(maxTime, numTrials)
-    for t in range(maxTime + 1):
+    dist_lists = perform_sim(max_time, num_trials)
+    for t in range(max_time + 1):
         tot = 0.0
-        for distL in distLists:
-            tot += distL[t]
-        means.append(tot / len(distL))
+        for dist_l in dist_lists:
+            tot += dist_l[t]
+        means.append(tot / len(dist_lists))
     pylab.figure()
     pylab.plot(means)
     pylab.xlabel('distance')
     pylab.ylabel('time')
-    pylab.title('Average Distance  vs. Time (' + str(len(distLists)) +
+    pylab.title('Average Distance  vs. Time (' + str(len(dist_lists)) +
                 'trials)')
 
 
-ansQuest(500, 300)
+ans_quest(500, 300)
 pylab.show()

@@ -1,7 +1,6 @@
-'''
-文本块生成器
-'''
+"""文本块生成器"""
 __revision__ = '0.1'
+
 
 def lines(file):
     for line in file:

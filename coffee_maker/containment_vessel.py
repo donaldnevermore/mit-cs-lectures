@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
+from typing import Any
 
 
 class ContainmentVessel(ABC):
-    ui: any
-    hws: any
+    ui: Any
+    hws: Any
     is_brewing: bool = False
     is_complete: bool = True
 
