@@ -2,7 +2,7 @@ from turtle import *
 import math
 
 
-class Circle():
+class Circle:
     def __init__(self, origin, radius):
         self.origin = origin
         self.radius = radius
@@ -33,7 +33,7 @@ class Field:
 
 class Point:
     def __init__(self, x, y):
-        self.loction = (x, y)
+        self.location = (x, y)
 
     def move(self, newX, newY):
-        self.loction = (newX, newY)
+        self.location = (newX, newY)

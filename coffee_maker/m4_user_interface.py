@@ -1,6 +1,6 @@
-from .coffee_maker_api import CoffeeMakerAPI, BrewButtonStatus, IndicatorState
-from .user_interface import UserInterface
-from .pollable import Pollable
+from coffee_maker_api import CoffeeMakerAPI, BrewButtonStatus, IndicatorState
+from user_interface import UserInterface
+from pollable import Pollable
 
 
 class M4UserInterface(UserInterface, Pollable):

@@ -1,6 +1,6 @@
-from .coffee_maker_api import CoffeeMakerAPI, WarmerPlateStatus, WarmerState
-from .containment_vessel import ContainmentVessel
-from .pollable import Pollable
+from coffee_maker_api import CoffeeMakerAPI, WarmerPlateStatus, WarmerState
+from containment_vessel import ContainmentVessel
+from pollable import Pollable
 
 
 class M4ContainmentVessel(ContainmentVessel, Pollable):

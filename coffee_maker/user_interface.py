@@ -1,10 +1,9 @@
 from abc import ABC, abstractmethod
-from typing import Any
 
 
 class UserInterface(ABC):
-    hws: Any
-    cv: Any
+    hws: "HotWaterSource"
+    cv: "ContainmentVessel"
     is_complete: bool = True
 
     def init(self, hws, cv):

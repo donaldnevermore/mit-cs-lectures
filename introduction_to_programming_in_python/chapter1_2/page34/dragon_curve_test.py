@@ -1,19 +1,19 @@
 import unittest
-from dragon_curve import dragonCurve
+from dragon_curve import dragon_curve
 
 
 class DragonCurveTest(unittest.TestCase):
     def test_level_zero(self):
-        self.assertEqual(dragonCurve(0), 'F')
+        self.assertEqual(dragon_curve(0), 'F')
 
     def test_level_one(self):
-        self.assertEqual(dragonCurve(1), 'FLF')
+        self.assertEqual(dragon_curve(1), 'FLF')
 
     def test_level_two(self):
-        self.assertEqual(dragonCurve(2), 'FLFLFRF')
+        self.assertEqual(dragon_curve(2), 'FLFLFRF')
 
     def test_level_three(self):
-        self.assertEqual(dragonCurve(3), 'FLFLFRFLFLFRFRF')
+        self.assertEqual(dragon_curve(3), 'FLFLFRFLFLFRFRF')
 
 
 if __name__ == '__main__':

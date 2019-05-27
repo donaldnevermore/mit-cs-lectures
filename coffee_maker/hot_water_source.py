@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
-from typing import Any
+from typing import Protocol
 
 
 class HotWaterSource(ABC):
-    ui: Any
-    cv: Any
+    ui: "UserInterface"
+    cv: "ContainmentVessel"
     is_brewing: bool = False
 
     def init(self, ui, cv):

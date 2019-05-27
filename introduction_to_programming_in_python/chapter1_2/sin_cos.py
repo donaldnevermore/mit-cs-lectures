@@ -1,4 +1,7 @@
 import math
+
+
+result = 0.0
 for i in range(11):
     result = math.sin(i)**2.0 + math.cos(i)**2.0
     print(result)

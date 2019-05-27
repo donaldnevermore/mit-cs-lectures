@@ -1,5 +1,5 @@
-from .coffee_maker_api import CoffeeMakerAPI, BoilerStatus, ReliefValveState, BoilerState
-from .hot_water_source import HotWaterSource
+from coffee_maker_api import CoffeeMakerAPI, BoilerStatus, ReliefValveState, BoilerState
+from hot_water_source import HotWaterSource
 
 
 class M4HotWaterSource(HotWaterSource):

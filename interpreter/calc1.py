@@ -1,3 +1,4 @@
+from typing import Optional
 # Token types
 #
 # EOF (end-of-file) token is used to indicate that
@@ -28,8 +29,8 @@ class Token:
 class Interpreter:
     text: str
     pos: int
-    current_token: Token
-    current_char: str
+    current_token: Optional[Token]
+    current_char: Optional[str]
 
     def __init__(self, text):
         # 输入的字符串

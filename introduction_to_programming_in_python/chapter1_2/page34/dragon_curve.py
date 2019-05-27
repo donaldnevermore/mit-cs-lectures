@@ -1,14 +1,14 @@
-def dragonCurve(level):
+def dragon_curve(level: int):
     if level == 0:
         return 'F'
     else:
-        prevPattern = dragonCurve(level - 1)
-        nextPattern = ''
-        for i in reversed(prevPattern):
+        prev_pattern = dragon_curve(level - 1)
+        next_pattern = ''
+        for i in reversed(prev_pattern):
             if i == 'L':
-                nextPattern += 'R'
+                next_pattern += 'R'
             elif i == 'R':
-                nextPattern += 'L'
+                next_pattern += 'L'
             else:
-                nextPattern += i
-        return prevPattern + 'L' + nextPattern
+                next_pattern += i
+        return prev_pattern + 'L' + next_pattern
