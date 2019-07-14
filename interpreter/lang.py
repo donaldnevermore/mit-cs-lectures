@@ -1,4 +1,4 @@
-"""996icu-lang"""
+"""lang"""
 
 # token 类型
 # EOF 是文件结尾符
