@@ -23,8 +23,8 @@ def merge(left, right):
 
 
 def merge_sort(arr):
-    """归并排序
-
+    """
+    归并排序
     复杂度 n*log(n)
     """
     if len(arr) <= 1:
