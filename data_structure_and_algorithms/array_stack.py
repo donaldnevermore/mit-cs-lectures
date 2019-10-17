@@ -1,17 +1,22 @@
-class Stack:
-    _a: list
+from typing import List, TypeVar, Generic
 
-    def __init__(self):
-        self._a = []
+T = TypeVar("T")
 
-    def is_empty(self):
-        return len(self._a) == 0
 
-    def __len__(self):
-        return len(self._a)
+class Stack(Generic[T]):
+    a: List[T]
 
-    def push(self, item):
-        self._a += [item]
+    def __init__(self) -> None:
+        self.a = []
 
-    def pop(self):
-        return self._a.pop()
+    def is_empty(self) -> bool:
+        return len(self.a) == 0
+
+    def __len__(self) -> int:
+        return len(self.a)
+
+    def push(self, item: T) -> None:
+        self.a += [item]
+
+    def pop(self) -> T:
+        return self.a.pop()

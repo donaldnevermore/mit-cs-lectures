@@ -1,8 +1,11 @@
-# caches
-.mypy_cache
-**/__pycache__
-.pytest_cache
+# venv
+env
 
 # IDE
 .vscode
 .idea
+
+# caches
+**/__pycache__
+**/.mypy_cache
+**/.pytest_cache

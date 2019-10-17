@@ -1,25 +1,27 @@
 def select_sort(arr):
     """
-    选择排序 不稳定
+    选择排序
+    稳定性 不稳定
+    复杂度 所有情况 O(n^2)
 
-    复杂度
-    所有情况 O(n^2)
-
-    每次从待排序的元素中选出最小的，放在最左侧，直到所有待排序的元素排完。
-
-    从第0个元素开始，与右侧n-1个元素比较，选择到最小值，放到第1个；
-    然后第1个元素，以此类推。
+    1. 找到数组中最小的那个元素中，
+    2. 将它和数组的第一个元素交换位置，
+    3. 在剩下的元素中找到最小的元素，将它和数组的第二个元素交换位置，
+    4. 如此往复，知道将整个数组排序。
     """
+    # 索引从 0 到 n-2
     for i in range(len(arr) - 1):
-        min_index = i
-        min_value = arr[i]
+        # 最小元素的索引
+        min = i
+        # min 与从 i+1 到 n 的元素比较
         j = i + 1
         while j < len(arr):
-            if min_value > arr[j]:
-                min_index = j
-                min_value = arr[j]
+            if arr[min] > arr[j]:
+                # 找到最小的元素
+                min = j
             j += 1
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        # 交换位置
+        arr[i], arr[min] = arr[min], arr[i]
 
 
 a = [5, 1, 4, 3, 2, 6]

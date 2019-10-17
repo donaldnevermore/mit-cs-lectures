@@ -1,40 +1,50 @@
-class Queue:
+from typing import TypeVar, Generic, Optional, Union, NoReturn
+from dataclasses import dataclass
+
+T = TypeVar("T")
+
+
+@dataclass
+class Node(Generic[T]):
+    item: T
+    next: Optional["Node"]
+
+
+class Queue(Generic[T]):
+    first: Optional[Node]
+    last: Optional[Node]
+    n: int
+
     def __init__(self):
         self.first = None
         self.last = None
-        self.length = 0
+        self.n = 0
 
-    def is_empty(self):
+    def is_empty(self) -> bool:
         return self.first is None
 
-    def enqueue(self, item):
+    def enqueue(self, item: T) -> None:
         old_last = self.last
         self.last = Node(item, None)
-
         if self.is_empty():
             self.first = self.last
         else:
             old_last.next = self.last
 
-        self.length += 1
+        self.n += 1
 
-    def dequeue(self):
-        # 队列为空会报错
-        item = self.first.item
+    def dequeue(self) -> Union[T, NoReturn]:
+        if self.is_empty():
+            raise Exception("队列为空，无法出列")
+
+        item: T = self.first.item
         self.first = self.first.next
-
+        # 队列从非空变为空
         if self.is_empty():
             self.last = None
 
-        self.length -= 1
-
+        self.n -= 1
         return item
 
-    def __len__(self):
-        return self.length
-
-
-class Node:
-    def __init__(self, item, next):
-        self.item = item
-        self.next = next
+    def __len__(self) -> int:
+        return self.n
