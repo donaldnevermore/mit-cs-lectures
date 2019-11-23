@@ -1,4 +1,12 @@
 def quick_sort(arr):
+    """
+    快速排序
+    稳定性：
+    复杂度：
+    平均 O(nlog(n))
+    最坏 O(n^2)
+    最好 O(nlog(n))
+    """
     if len(arr) <= 1:
         return arr
 

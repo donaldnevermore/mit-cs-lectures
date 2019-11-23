@@ -15,7 +15,7 @@ class Queue(Generic[T]):
     last: Optional[Node]
     n: int
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.first = None
         self.last = None
         self.n = 0
@@ -29,6 +29,7 @@ class Queue(Generic[T]):
         if self.is_empty():
             self.first = self.last
         else:
+            assert old_last is not None
             old_last.next = self.last
 
         self.n += 1
@@ -37,6 +38,7 @@ class Queue(Generic[T]):
         if self.is_empty():
             raise Exception("队列为空，无法出列")
 
+        assert self.first is not None
         item: T = self.first.item
         self.first = self.first.next
         # 队列从非空变为空

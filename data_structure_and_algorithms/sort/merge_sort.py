@@ -25,7 +25,11 @@ def merge(left, right):
 def merge_sort(arr):
     """
     归并排序
-    复杂度 n*log(n)
+    稳定性：稳定
+    复杂度：
+    平均 O(nlog(n))
+    最坏 O(nlog(n))
+    最好 O(nlog(n))
     """
     if len(arr) <= 1:
         return arr

@@ -1,8 +1,11 @@
 def select_sort(arr):
     """
     选择排序
-    稳定性 不稳定
-    复杂度 所有情况 O(n^2)
+    稳定性：不稳定
+    复杂度：
+    平均 O(n^2)
+    最坏 O(n^2)
+    最好 O(n^2)
 
     1. 找到数组中最小的那个元素中，
     2. 将它和数组的第一个元素交换位置，
@@ -13,7 +16,7 @@ def select_sort(arr):
     for i in range(len(arr) - 1):
         # 最小元素的索引
         min = i
-        # min 与从 i+1 到 n 的元素比较
+        # min 与从 i+1 到 n-1 的元素比较
         j = i + 1
         while j < len(arr):
             if arr[min] > arr[j]:
