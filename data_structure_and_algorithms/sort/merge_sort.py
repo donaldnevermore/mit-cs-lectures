@@ -1,25 +1,14 @@
 def merge(left, right):
     """合并左半部分和右半部分"""
-    result = []
-    i, j = 0, 0
+    arr = []
 
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            result.append(left[i])
-            i += 1
+    while len(left) and len(right):
+        if left[0] < right[0]:
+            arr.append(left.pop(0))
         else:
-            result.append(right[j])
-            j += 1
+            arr.append(right.pop(0))
 
-    # 把比较大小后剩下的放进去
-    while i < len(left):
-        result.append(left[i])
-        i += 1
-    while j < len(right):
-        result.append(right[j])
-        j += 1
-
-    return result
+    return arr + left + right
 
 
 def merge_sort(arr):
@@ -37,8 +26,7 @@ def merge_sort(arr):
         middle = len(arr) // 2
         left = merge_sort(arr[:middle])
         right = merge_sort(arr[middle:])
-        together = merge(left, right)
-        return together
+        return merge(left, right)
 
 
 a = [5, 3, 1, 2, 4, 6]

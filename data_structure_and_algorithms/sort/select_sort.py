@@ -15,16 +15,16 @@ def select_sort(arr):
     # 索引从 0 到 n-2
     for i in range(len(arr) - 1):
         # 最小元素的索引
-        min = i
+        min_index = i
         # min 与从 i+1 到 n-1 的元素比较
         j = i + 1
         while j < len(arr):
-            if arr[min] > arr[j]:
+            if arr[min_index] > arr[j]:
                 # 找到最小的元素
-                min = j
+                min_index = j
             j += 1
         # 交换位置
-        arr[i], arr[min] = arr[min], arr[i]
+        arr[i], arr[min_index] = arr[min_index], arr[i]
 
 
 a = [5, 1, 4, 3, 2, 6]
