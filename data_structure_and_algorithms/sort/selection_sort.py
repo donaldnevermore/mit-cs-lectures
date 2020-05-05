@@ -8,23 +8,28 @@ def select_sort(arr):
     最好 O(n^2)
 
     1. 找到数组中最小的那个元素中，
-    2. 将它和数组的第一个元素交换位置，
-    3. 在剩下的元素中找到最小的元素，将它和数组的第二个元素交换位置，
+    2. 将它和数组的第 1 个元素交换位置，
+    3. 在剩下的元素中找到最小的元素，将它和数组的第 2 个元素交换位置，
     4. 如此往复，知道将整个数组排序。
     """
-    # 索引从 0 到 n-2
-    for i in range(len(arr) - 1):
+    n = len(arr)
+
+    # 索引从 0 到 n-1
+    for i in range(n):
         # 最小元素的索引
-        min_index = i
+        min = i
+
         # min 与从 i+1 到 n-1 的元素比较
         j = i + 1
-        while j < len(arr):
-            if arr[min_index] > arr[j]:
+        while j < n:
+            if arr[j] < arr[min]:
                 # 找到最小的元素
-                min_index = j
+                min = j
+
             j += 1
+
         # 交换位置
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        arr[i], arr[min] = arr[min], arr[i]
 
 
 a = [5, 1, 4, 3, 2, 6]
