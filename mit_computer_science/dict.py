@@ -3,23 +3,26 @@
 import math
 
 # 字典的基本操作
-Dict1 = {1: 'one', 2: 'two', 3: 'three'}
-L1 = [[1, 'one'], [2, 'two']]
-del Dict1[1]
-# print(Dict1)
+dict1 = {1: "one", 2: "two", 3: "three"}
+list1 = [[1, "one"], [2, "two"]]
+del dict1[1]
 
 
-def keySearch(L, k):
-    for elem in L:
-        if elem[0] == k:
+# print(dict1)
+
+
+def key_search(data, key):
+    for elem in data:
+        if elem[0] == key:
             return elem[1]
         else:
             return None
 
-# print(keySearch(L1, 1))
+
+# print(key_search(list1, 1))
 
 # 确保输入为浮点数
-def getFloat(requestMsg, errorMsg):
+def get_float(requestMsg, errorMsg):
     inputOK = False
     while not inputOK:
         try:
@@ -32,10 +35,10 @@ def getFloat(requestMsg, errorMsg):
 
 
 # Get base and height
-base = getFloat('Enter a float', 'Error: Base must be a floating point number')
-height = getFloat(
-    'Enter a float', 'Error: Height must be a floating point number')
+base = get_float("Enter a float", "Error: Base must be a floating point number")
+height = get_float(
+    "Enter a float", "Error: Height must be a floating point number")
 
 #  毕达哥斯拉定理的第三条边的计算
 hyp = math.sqrt(base * base + height * height)
-print('base:' + str(base) + ' height:' + str(height) + ' hyp:' + str(hyp))
+print("base:" + str(base) + " height:" + str(height) + " hyp:" + str(hyp))

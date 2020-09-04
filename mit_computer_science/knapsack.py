@@ -1,72 +1,72 @@
-def max_value(weight, value, index, available_weight):
+def max_value(weights, values, index, weight_available):
     """背包问题
 
-    :param weight: 重量
-    :param value: 价值
+    :param weights: 重量
+    :param values: 价值
     :param index: 索引，默认从最后一个开始
-    :param available_weight: 可用重量
+    :param weight_available: 可用重量
     :return: 最大价值
     """
     global num_calls
     num_calls += 1
 
     if index == 0:
-        if weight[index] <= available_weight:
-            # 还能装进背包，就放入
-            return value[index]
+        if weights[index] <= weight_available:
+            # Packed if not full.
+            return values[index]
         else:
             return 0
 
-    # 不装进背包
-    without_index = max_value(weight, value, index - 1, available_weight)
+    # Not packed.
+    without_index = max_value(weights, values, index - 1, weight_available)
 
-    if weight[index] > available_weight:
-        # 装不下了
+    if weights[index] > weight_available:
+        # The knapsack is full.
         return without_index
     else:
-        with_index = value[index] + max_value(weight, value, index - 1, available_weight - weight[index])
+        with_index = values[index] + max_value(weights, values, index - 1, weight_available - weights[index])
+        return max(with_index, without_index)
 
-    return max(with_index, without_index)
 
-
-def fast_max_value(weight, value, index, available_weight, memory):
+def fast_max_value(weights, values, index, weight_available, memory):
     global count
     count += 1
 
-    try:
-        return memory[(index, available_weight)]
-    except KeyError:
-        if index == 0:
-            if weight[index] <= available_weight:
-                memory[(index, available_weight)] = value[index]
-                return value[index]
-            else:
-                memory[(index, available_weight)] = 0
-                return 0
+    if (index, weight_available) in memory:
+        return memory[(index, weight_available)]
 
-        without_index = fast_max_value(weight, value, index - 1, available_weight, memory)
-
-        if weight[index] > available_weight:
-            memory[(index, available_weight)] = without_index
-            return without_index
+    if index == 0:
+        if weights[index] <= weight_available:
+            memory[(index, weight_available)] = values[index]
+            return values[index]
         else:
-            with_index = value[index] + fast_max_value(weight, value, index - 1, available_weight - weight[index],
-                                                       memory)
+            memory[(index, weight_available)] = 0
+            return 0
 
+    without_index = fast_max_value(weights, values, index - 1, weight_available, memory)
+
+    if weights[index] > weight_available:
+        memory[(index, weight_available)] = without_index
+        return without_index
+    else:
+        with_index = values[index] + fast_max_value(weights, values, index - 1, weight_available - weights[index],
+                                                    memory)
         result = max(with_index, without_index)
-        memory[(index, available_weight)] = result
+        memory[(index, weight_available)] = result
         return result
 
 
 num_calls = 0
 count = 0
-ww = [5, 3, 2, 5, 7, 8, 6, 7, 10, 1, 3, 4, 5, 6, 7, 8, 8, 1, 1, 5, 7, 6, 2, 1, 8, 4, 2, 8]
-vv = [9, 7, 8, 3, 4, 5, 6, 10, 9, 8, 7, 8, 6, 5, 4, 3, 5, 7, 8, 2, 0, 3, 2, 0, 7, 5, 6, 9]
-w = [5, 3, 2]
-v = [9, 7, 8]
-aw = 5
+weight_available = 5
 memo = {}
-print(fast_max_value(ww, vv, len(ww) - 1, aw, memo))
+
+weights = [5, 3, 2, 5, 7, 8, 6, 7, 10, 1, 3, 4, 5, 6, 7, 8, 8, 1, 1, 5, 7, 6, 2, 1, 8, 4, 2, 8]
+values = [9, 7, 8, 3, 4, 5, 6, 10, 9, 8, 7, 8, 6, 5, 4, 3, 5, 7, 8, 2, 0, 3, 2, 0, 7, 5, 6, 9]
+print(fast_max_value(weights, values, len(weights) - 1, weight_available, memo))
 print(memo)
 print(count)
-print(max_value(w, v, len(w) - 1, aw), num_calls)
+
+weights2 = [5, 3, 2]
+values2 = [9, 7, 8]
+print(max_value(weights2, values2, len(weights2) - 1, weight_available), num_calls)

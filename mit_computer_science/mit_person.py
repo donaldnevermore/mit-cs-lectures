@@ -16,14 +16,14 @@ class Person:
         return self.say(to_whom, something + ' tra la la')
 
 
-class MITPerson(Person):
+class MitPerson(Person):
     id_num: int
     next_id_num = 0
 
     def __init__(self, family_name, first_name):
         super().__init__(family_name, first_name)
-        self.id_num = MITPerson.next_id_num
-        MITPerson.next_id_num += 1
+        self.id_num = MitPerson.next_id_num
+        MitPerson.next_id_num += 1
 
     def get_id_num(self):
         return self.id_num
@@ -32,10 +32,10 @@ class MITPerson(Person):
         return '<MITPerson: %s %s>' % (self.first_name, self.family_name)
 
 
-m1 = MITPerson('smith', 'Fred')
+m1 = MitPerson('smith', 'Fred')
 p1 = Person('foobar', 'Jane')
-m2 = MITPerson('william', 'King')
-m3 = MITPerson('stupid', 'Fool')
+m2 = MitPerson('william', 'King')
+m3 = MitPerson('stupid', 'Fool')
 print(m1.get_id_num())
 print(m2.get_id_num())
 print(m3.get_id_num())

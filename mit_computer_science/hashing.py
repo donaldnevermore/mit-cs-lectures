@@ -1,20 +1,19 @@
-# 哈希映射
-def charSetCreate():
-    charSet = []
+def char_set_create():
+    char_set = []
     for i in range(0, 255):
-        charSet.append(None)
-    return charSet
+        char_set.append(None)
+    return char_set
 
 
-def insert(charSet, e):
-    charSet[hashChar(e)] = 1
+def insert(char_set, e):
+    char_set[hash_char(e)] = 1
 
 
-def member(charSet, e):
-    return charSet[e] == 1
+def member(char_set, e):
+    return char_set[e] == 1
 
 
-def hashChar(c):
+def hash_char(c):
     return ord(c)
 
 

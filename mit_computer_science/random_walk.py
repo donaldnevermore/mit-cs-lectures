@@ -30,7 +30,7 @@ class CompassPt:
         if pt in self.possibles:
             self.pt = pt
         else:
-            raise ValueError('inCompassPt.__init__')
+            raise ValueError("inCompassPt.__init__")
 
     def move(self, dist):
         if self.pt == 'N':
@@ -42,7 +42,7 @@ class CompassPt:
         elif self.pt == 'W':
             return -dist, 0
         else:
-            raise ValueError('in  CompassPt.move')
+            raise ValueError("in  CompassPt.move")
 
 
 class Field:
@@ -68,10 +68,10 @@ class Drunk:
 
     def move(self, field, time=1):
         if field.get_drunk() != self:
-            raise ValueError('Drunk.move called with drunk not in field')
+            raise ValueError("Drunk.move called with drunk not in field")
         for i in range(time):
             pt = CompassPt(random.choice(CompassPt.possibles))
-            field.move(pt, 1)  # Drunk每次走一步
+            field.move(pt, 1)  # Drunk moves a step
 
 
 def perform_trial(time, f):
@@ -85,20 +85,20 @@ def perform_trial(time, f):
     return distances
 
 
-drunk = Drunk('Homer Simpson')
+drunk = Drunk("Homer Simpson")
 for i in range(3):
     f = Field(drunk, Location(0, 0))
     distances = perform_trial(500, f)
     pylab.plot(distances)
-pylab.title('Homer\'s Random Walk')
-pylab.xlabel('Time')
-pylab.ylabel('Distance from Origin')
+pylab.title("Homer\'s Random Walk")
+pylab.xlabel("Time")
+pylab.ylabel("Distance from Origin")
 
 
 def perform_sim(time, num_trials):
     dist_lists = []
     for trial in range(num_trials):
-        d = Drunk('Drunk' + str(trial))
+        d = Drunk("Drunk" + str(trial))
         f = Field(d, Location(0, 0))
         distances = perform_trial(time, f)
         dist_lists.append(distances)
@@ -115,10 +115,10 @@ def ans_quest(max_time, num_trials):
         means.append(tot / len(dist_lists))
     pylab.figure()
     pylab.plot(means)
-    pylab.xlabel('distance')
-    pylab.ylabel('time')
-    pylab.title('Average Distance  vs. Time (' + str(len(dist_lists)) +
-                'trials)')
+    pylab.xlabel("distance")
+    pylab.ylabel("time")
+    pylab.title("Average Distance  vs. Time (" + str(len(dist_lists)) +
+                "trials)")
 
 
 ans_quest(500, 300)

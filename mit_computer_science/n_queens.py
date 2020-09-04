@@ -2,7 +2,7 @@ import random
 
 
 def conflict(state, next_x):
-    """检查皇后能否被吃"""
+    """Check if the queen would be eaten."""
     next_y = len(state)
     for i in range(next_y):
         if abs(state[i] - next_x) in (0, next_y - i):
@@ -11,7 +11,7 @@ def conflict(state, next_x):
 
 
 def queens(num=8, state=()):
-    """只剩一个皇后没放，穷举她的位置，递归太多影响性能"""
+    """Brute force the last queen."""
     for pos in range(num):
         if not conflict(state, pos):
             if len(state) == num - 1:
@@ -22,8 +22,6 @@ def queens(num=8, state=()):
 
 
 def pretty_print(solution):
-    """美化输出"""
-
     def line(pos, length=len(solution)):
         return '. ' * pos + 'X ' + '. ' * (length - pos - 1)
 
@@ -36,5 +34,5 @@ def main():
     pretty_print(answer)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
