@@ -1,11 +1,12 @@
-# venv
-env
-
 # IDE
 .vscode
 .idea
+.vs
 
-# caches
+# Caches
 **/__pycache__
 **/.mypy_cache
 **/.pytest_cache
+
+# History
+.history
