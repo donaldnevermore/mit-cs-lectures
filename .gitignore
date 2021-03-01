@@ -1,4 +1,4 @@
-# IDE
+# IDEs
 .vscode
 .idea
 .vs
@@ -7,6 +7,4 @@
 **/__pycache__
 **/.mypy_cache
 **/.pytest_cache
-
-# History
-.history
+**/.ipynb_checkpoints

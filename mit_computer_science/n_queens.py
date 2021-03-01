@@ -23,7 +23,7 @@ def queens(num=8, state=()):
 
 def pretty_print(solution):
     def line(pos, length=len(solution)):
-        return '. ' * pos + 'X ' + '. ' * (length - pos - 1)
+        return ". " * pos + "X " + ". " * (length - pos - 1)
 
     for pos in solution:
         print(line(pos))
