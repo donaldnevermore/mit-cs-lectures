@@ -1,4 +1,3 @@
-from turtle import *
 import math
 
 
@@ -7,23 +6,25 @@ class Circle:
         self.origin = origin
         self.radius = radius
 
-    def moveOrigin(self, newOrigin, dist=1):
-        dist = math.sqrt((origin.x - newOrigin.x)**2 +
-                         (origin.y - newOrigin.y)**2)  # 计算两点距离
-        xDist = origin.x - newOrigin.x  # 水平距离
-        yDist = origin.y - newOrigin.y  # 垂直距离
+    def move_origin(self, location, distance=1):
+        # Calculate the distance.
+        dist = math.sqrt(
+            (self.origin.x - location.x) ** 2 + (self.origin.y - location.y) ** 2
+        )
+        x_dist = self.origin.x - location.x  # 水平距离
+        y_dist = self.origin.y - location.y  # 垂直距离
         ratio = dist / distance
-        xMove = abs(xDist) * ratio
-        yMove = abs(yDist) * ratio
-        if xDist > 0:
-            newX = origin.x - xMove
+        x_move = abs(x_dist) * ratio
+        y_move = abs(y_dist) * ratio
+        if x_dist > 0:
+            new_x = self.origin.x - x_move
         else:
-            newX = origin.x + xMove
-        if yDist > 0:
-            newY = origin.y - yMove
+            new_x = self.origin.x + x_move
+        if y_dist > 0:
+            new_y = self.origin.y - y_move
         else:
-            newY = origin.y + yMove
-        return (newX, newY)
+            new_y = self.origin.y + y_move
+        return (new_x, new_y)
 
 
 class Field:
@@ -35,5 +36,5 @@ class Point:
     def __init__(self, x, y):
         self.location = (x, y)
 
-    def move(self, newX, newY):
-        self.location = (newX, newY)
+    def move(self, new_x, new_y):
+        self.location = (new_x, new_y)

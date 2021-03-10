@@ -1,5 +1,3 @@
-"""随机移动问题"""
-
 import math
 import random
 import pylab
@@ -24,7 +22,7 @@ class Location:
 
 
 class CompassPt:
-    possibles = ('N', 'S', 'E', 'W')
+    possibles = ("N", "S", "E", "W")
 
     def __init__(self, pt):
         if pt in self.possibles:
@@ -33,16 +31,16 @@ class CompassPt:
             raise ValueError("inCompassPt.__init__")
 
     def move(self, dist):
-        if self.pt == 'N':
+        if self.pt == "N":
             return 0, dist
-        elif self.pt == 'S':
+        elif self.pt == "S":
             return 0, -dist
-        elif self.pt == 'E':
+        elif self.pt == "E":
             return dist, 0
-        elif self.pt == 'W':
+        elif self.pt == "W":
             return -dist, 0
         else:
-            raise ValueError("in  CompassPt.move")
+            raise ValueError("in CompassPt.move")
 
 
 class Field:
@@ -90,7 +88,7 @@ for i in range(3):
     f = Field(drunk, Location(0, 0))
     distances = perform_trial(500, f)
     pylab.plot(distances)
-pylab.title("Homer\'s Random Walk")
+pylab.title("Homer's Random Walk")
 pylab.xlabel("Time")
 pylab.ylabel("Distance from Origin")
 
@@ -117,8 +115,7 @@ def ans_quest(max_time, num_trials):
     pylab.plot(means)
     pylab.xlabel("distance")
     pylab.ylabel("time")
-    pylab.title("Average Distance  vs. Time (" + str(len(dist_lists)) +
-                "trials)")
+    pylab.title("Average Distance  vs. Time (" + str(len(dist_lists)) + "trials)")
 
 
 ans_quest(500, 300)

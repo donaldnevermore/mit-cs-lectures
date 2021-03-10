@@ -29,10 +29,6 @@ def pretty_print(solution):
         print(line(pos))
 
 
-def main():
+if __name__ == "__main__":
     answer = random.choice(list(queens(10)))
     pretty_print(answer)
-
-
-if __name__ == "__main__":
-    main()

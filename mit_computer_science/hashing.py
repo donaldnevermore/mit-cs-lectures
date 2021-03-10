@@ -15,6 +15,3 @@ def member(char_set, e):
 
 def hash_char(c):
     return ord(c)
-
-
-

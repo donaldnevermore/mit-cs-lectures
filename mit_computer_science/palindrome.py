@@ -16,4 +16,4 @@ def view_calls(text, indent):
         return answer
 
 
-view_calls("abcba", '*')
+view_calls("abcba", "*")

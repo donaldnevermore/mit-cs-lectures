@@ -15,7 +15,6 @@ def search(s, e):
 count = 0
 
 
-# 牛顿二分查找法
 def bisearch(s, e, first, last):
     global count
     count += 1

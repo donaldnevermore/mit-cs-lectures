@@ -4,23 +4,13 @@ class Person:
         self.first_name = first_name
 
     def __str__(self):
-        return "<Person: %s %s>" % (self.first_name, self.family_name)
+        return f"<Person: {self.first_name} {self.family_name}>"
 
     def say(self, to_whom, something):
-        return (
-            self.first_name
-            + " "
-            + self.family_name
-            + " says to "
-            + to_whom.first_name
-            + " "
-            + to_whom.family_name
-            + ": "
-            + something
-        )
+        return f"{self.first_name} {self.family_name} says to {to_whom.first_name} {to_whom.family_name}: {something}"
 
     def sing(self, to_whom, something):
-        return self.say(to_whom, something + " tra la la")
+        return self.say(to_whom, f"{something} tra la la")
 
 
 class MitPerson(Person):

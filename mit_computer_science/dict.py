@@ -1,5 +1,3 @@
-# 结构化代码的示例
-
 import math
 
 # 字典的基本操作
@@ -36,8 +34,7 @@ def get_float(requestMsg, errorMsg):
 
 # Get base and height
 base = get_float("Enter a float", "Error: Base must be a floating point number")
-height = get_float(
-    "Enter a float", "Error: Height must be a floating point number")
+height = get_float("Enter a float", "Error: Height must be a floating point number")
 
 #  毕达哥斯拉定理的第三条边的计算
 hyp = math.sqrt(base * base + height * height)
