@@ -3,6 +3,10 @@
 .idea/
 .vs/
 
+.pdm-python
+.venv/
+/*.egg-info
+
 # Caches
 **/__pycache__/
 **/.mypy_cache/
